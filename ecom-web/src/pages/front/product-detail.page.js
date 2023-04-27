@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Badge, Form, Button } from "react-bootstrap";
 import SliderComponent from "../../component/common/slider/slider.component";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 import SingleProductView from "../../component/front/single-product-view/single-product.component";
 import { useParams } from "react-router-dom";
 import { getProductBySlug } from "../../services/product.service";
@@ -81,7 +81,7 @@ const ProductDetailPage = () => {
                 </Row>
                 <Row className="mt-3">
                   <Col>
-                    <NumberFormat
+                    <NumericFormat
                       value={data.after_discount}
                       displayType={"text"}
                       thousandSeparator={true}
@@ -89,7 +89,7 @@ const ProductDetailPage = () => {
                     />
                     {data.discount && (
                       <del className="text-danger px-3">
-                        <NumberFormat
+                        <NumericFormat
                           value={data.price}
                           displayType={"text"}
                           thousandSeparator={true}

@@ -8,7 +8,7 @@ import {
   deleteProductById,
   getProductByType,
 } from "../../../../services/product.service";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 
 const ProductPage = () => {
   const deleteProduct = async (id) => {
@@ -43,7 +43,7 @@ const ProductPage = () => {
     {
       name: "Price",
       selector: (row) => (
-        <NumberFormat
+        <NumericFormat
           value={row.after_discount}
           displayType={"text"}
           thousandSeparator={true}

@@ -2,7 +2,7 @@ import { Button, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import noImageFound from "../../../assets/image/no-image-found.jpg";
 import Badge from "react-bootstrap/Badge";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -60,7 +60,7 @@ const SingleProductView = ({ data, type }) => {
               </NavLink>
             </Badge>
             <p className="h6 mt-3">
-              <NumberFormat
+              <NumericFormat
                 value={data.after_discount}
                 displayType={"text"}
                 thousandSeparator={true}
@@ -68,7 +68,7 @@ const SingleProductView = ({ data, type }) => {
               />
               {data.discount && (
                 <del className="text-danger px-3">
-                  <NumberFormat
+                  <NumericFormat
                     value={data.price}
                     displayType={"text"}
                     thousandSeparator={true}
